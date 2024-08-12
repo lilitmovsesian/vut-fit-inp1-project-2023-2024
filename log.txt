@@ -1,0 +1,95 @@
+/usr/local/share/ghdl/bin/ghdl -i --ieee=synopsys -fexplicit --workdir=build --work=work ../src/cpu.vhd
+/usr/local/share/ghdl/bin/ghdl -m --ieee=synopsys -fexplicit --workdir=build -Pbuild --work=work cpu
+/usr/local/share/ghdl/bin/ghdl -r --ieee=synopsys -fexplicit --workdir=build -Pbuild --work=work cpu --vpi=/homes/eva/xm/xmovse00/inp23-projekt1/env/lib/python3.8/site-packages/cocotb/libs/libcocotbvpi_ghdl.so
+     -.--ns INFO     gpi                                ..mbed/gpi_embed.cpp:109  in set_program_name_in_venv        Using Python virtual environment interpreter at /homes/eva/xm/xmovse00/inp23-projekt1/env/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on GHDL version 2.0.0 (tarball) [Dunoon edition]
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.7.1 from /homes/eva/xm/xmovse00/inp23-projekt1/env/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1701085933
+     0.00ns INFO     cocotb.hexdigest                   lib: db913e6f9a8b6fd10e0c8ec59ef3e5fa
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_reset
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_init
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_increment
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_decrement
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_move
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_print
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_input
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_while_loop
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_break
+     0.00ns INFO     cocotb.regression                  Found test cpu.test_login_xmovse00
+     0.00ns INFO     cocotb.regression                  running test_reset (1/10)
+     0.00ns INFO     cocotb.hexdigest                   test: 6e9a105e9a15def77a0e10c2806d45ed
+    51.00ns INFO     cocotb.regression                  test_reset passed
+    51.00ns INFO     cocotb.regression                  running test_init (2/10)
+                                                          Procesor initialization test
+    51.00ns INFO     cocotb.hexdigest                   test: 9214af39b7aec6f834f86922816d2a06
+    52.00ns INFO     cocotb.hexdigest                   code: 420cd9f16e90b08dbdf5195fdd9d0f62 len: 1
+   171.00ns INFO     cocotb.hexdigest                   result: 420cd9f16e90b08dbdf5195fdd9d0f62
+   171.00ns INFO     cocotb.regression                  test_init passed
+   171.00ns INFO     cocotb.regression                  running test_increment (3/10)
+                                                          Increment value of the first memory cell, i.e. *ptr++
+   171.00ns INFO     cocotb.hexdigest                   test: 5e50c6214b566fe2d3b6a35bb9239b9d
+   172.00ns INFO     cocotb.hexdigest                   code: 83fdb8859bf9b7036a839b918e308b60 len: 4
+   501.00ns INFO     cocotb.hexdigest                   result: 08a9e9c47976e0116dfa992853b8e023
+   501.00ns INFO     cocotb.regression                  test_increment passed
+   501.00ns INFO     cocotb.regression                  running test_decrement (4/10)
+                                                          Decrement value of the first memory cell, i.e. *ptr--
+   501.00ns INFO     cocotb.hexdigest                   test: b15426fc625e31797355a3c768a86228
+   502.00ns INFO     cocotb.hexdigest                   code: 0772f54a199d95c25fff832f480c9d84 len: 4
+   831.00ns INFO     cocotb.hexdigest                   result: cd6b8633aedcb944cec479ecee67bfa8
+   831.00ns INFO     cocotb.regression                  test_decrement passed
+   831.00ns INFO     cocotb.regression                  running test_move (5/10)
+                                                          Move the pointer to the next cell and increment its value
+   831.00ns INFO     cocotb.hexdigest                   test: a5eddfba5888841f3670b1848b1adcf3
+   832.00ns INFO     cocotb.hexdigest                   code: 7c1cd3f96fc2c2ff2e089c27cfda24b6 len: 3
+  1071.00ns INFO     cocotb.hexdigest                   result: 7efbf0ee85c154b96298cc5edbbd2370
+  1071.00ns INFO     cocotb.regression                  test_move passed
+  1071.00ns INFO     cocotb.regression                  running test_print (6/10)
+                                                          Print data to the output, i.e. putchar(*ptr)
+  1071.00ns INFO     cocotb.hexdigest                   test: f6a15ef56c09621c0b7a50b8a6737615
+  1072.00ns INFO     cocotb.hexdigest                   code: b265746fe722436c7a1a1d8de199b058 len: 4
+  2331.00ns INFO     cocotb.hexdigest                   result: b265746fe722436c7a1a1d8de199b058
+  2331.00ns INFO     cocotb.regression                  test_print passed
+  2331.00ns INFO     cocotb.regression                  running test_input (7/10)
+                                                          Load data from the input, i.e. *ptr=getchar()
+  2331.00ns INFO     cocotb.hexdigest                   test: 318080d2d2fe5c8bcacd220504059e1a
+  2332.00ns INFO     cocotb.hexdigest                   code: d3fac245532f03964cd19007b2032729 len: 4
+  3621.00ns INFO     cocotb.hexdigest                   result: 2ed967e2be16e52843468f1408cb360b
+  3622.00ns INFO     cocotb.hexdigest                   code: d3fac245532f03964cd19007b2032729 len: 4
+  4911.00ns INFO     cocotb.hexdigest                   result: e816e9d618b24eaf2f916252df61b844
+  4911.00ns INFO     cocotb.regression                  test_input passed
+  4911.00ns INFO     cocotb.regression                  running test_while_loop (8/10)
+                                                          Simple while loop test
+  4911.00ns INFO     cocotb.hexdigest                   test: c471d9a883780e7fc250a5026568354d
+  4912.00ns INFO     cocotb.hexdigest                   code: dc8bee53ab9c57eaa957fd0fe2002e38 len: 5
+  6321.00ns INFO     cocotb.hexdigest                   result: c5c20856db594032a8e2bc7a51242fe0
+  6321.00ns INFO     cocotb.regression                  test_while_loop passed
+  6321.00ns INFO     cocotb.regression                  running test_break (9/10)
+                                                          Simple break test
+  6321.00ns INFO     cocotb.hexdigest                   test: 8a504ab6ad7a466e84cb2d43b89050f2
+  6322.00ns INFO     cocotb.hexdigest                   code: 2ff92dcde40bfd62c304d85b3c307437 len: 6
+  6731.00ns INFO     cocotb.hexdigest                   result: ee374f6c466ac5617293b3600d1b5028
+  6731.00ns INFO     cocotb.regression                  test_break passed
+  6731.00ns INFO     cocotb.regression                  running test_login_xmovse00 (10/10)
+                                                          Executes program in login.b file
+  6731.00ns INFO     cocotb.hexdigest                   test: b734fa240ce7b4064173629404ffb1dd
+  6732.00ns INFO     cocotb.hexdigest                   code: ffdc708c4b1d11774b303c90651216c9 len: 76
+ 43511.00ns INFO     cocotb.hexdigest                   result: f5041b9e2f1b3cd6dc5a40df2ef2d114
+ 43511.00ns INFO     cocotb.regression                  test_login_xmovse00 passed
+ 43511.00ns INFO     cocotb.regression                  ****************************************************************************************
+                                                        ** TEST                            STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ****************************************************************************************
+                                                        ** cpu.test_reset                   PASS          51.00           0.00      16412.91  **
+                                                        ** cpu.test_init                    PASS         120.00           0.01      13760.84  **
+                                                        ** cpu.test_increment               PASS         330.00           0.02      18986.82  **
+                                                        ** cpu.test_decrement               PASS         330.00           0.02      18744.10  **
+                                                        ** cpu.test_move                    PASS         240.00           0.01      17829.77  **
+                                                        ** cpu.test_print                   PASS        1260.00           0.05      25429.32  **
+                                                        ** cpu.test_input                   PASS        2580.00           0.11      22464.96  **
+                                                        ** cpu.test_while_loop              PASS        1410.00           0.06      25007.69  **
+                                                        ** cpu.test_break                   PASS         410.00           0.02      20136.59  **
+                                                        ** cpu.test_login_xmovse00          PASS       36780.00           1.51      24427.45  **
+                                                        ****************************************************************************************
+                                                        ** TESTS=10 PASS=10 FAIL=0 SKIP=0              43511.00           2.09      20792.98  **
+                                                        ****************************************************************************************
+                                                        
